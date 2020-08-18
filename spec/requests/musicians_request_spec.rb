@@ -3,24 +3,31 @@
 require 'rails_helper'
 
 RSpec.describe 'Musicians', type: :request do
+  before(:each) do
+    @musician = create(:local_musician)
+  end
+
+  describe 'POST /create' do
+    it 'returns http post created with JSON of updated list of Musicians' do
+      post '/musicians', params: { musician: { name: 'Judah Tha Lion',
+                                               age: @musician.age,
+                                               active: @musician.active } }
+      expect(response).to have_http_status(:created)
+    end
+  end
+
   describe 'GET /index' do
-    it 'returns http success' do
-      get '/musicians/index'
-      expect(response).to have_http_status(:success)
+    it 'returns JSON list of all Musicians' do
+      get '/musicians'
+      expect(JSON(response.body).fetch('musicians').length).to eq(1)
     end
   end
 
-  describe 'GET /create' do
-    it 'returns http success' do
-      get '/musicians/create'
-      expect(response).to have_http_status(:success)
-    end
-  end
-
-  describe 'GET /update' do
-    it 'returns http success' do
-      get '/musicians/update'
-      expect(response).to have_http_status(:success)
+  describe 'PATCH /update' do
+    it 'returns updated JSON list of all Musicians' do
+      patch "/musicians/#{LocalMusician.first.id}",
+            params: { musician: { age: 40 } }
+      expect(response).to have_http_status(:ok)
     end
   end
 end

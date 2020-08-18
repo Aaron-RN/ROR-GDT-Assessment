@@ -6,8 +6,9 @@ class MusiciansController < ApplicationController
 
   def index
     render json: {
+      status: :ok,
       musicians: LocalMusician.all
-    }
+    }, status: :ok
   end
 
   def create
@@ -17,7 +18,7 @@ class MusiciansController < ApplicationController
       render json: {
         status: :created,
         musicians: LocalMusician.all
-      }
+      }, status: :created
     else
       render json: { status: 'ERROR', message: 'Artist could not be created!',
                      error: musician.errors.full_messages }, status: 500
@@ -29,7 +30,7 @@ class MusiciansController < ApplicationController
       render json: {
         status: :ok,
         musicians: LocalMusician.all
-      }
+      }, status: :ok
     else
       render json: { status: 'ERROR',
                      message: 'Artist could not be updated!',
