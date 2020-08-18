@@ -2,8 +2,8 @@
 
 FactoryBot.define do
   factory :local_musician do
-    name { 'MyString' }
-    age { 1 }
-    active { false }
+    name { 'TonAsh' }
+    age { 34 }
+    active { true }
   end
 end
