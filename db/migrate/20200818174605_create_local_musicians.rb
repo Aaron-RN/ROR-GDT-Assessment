@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class CreateLocalMusicians < ActiveRecord::Migration[6.0]
   def change
     create_table :local_musicians do |t|
