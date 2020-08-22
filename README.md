@@ -31,25 +31,31 @@ Once the POST request has successfully gone through an array of all musicians cu
 
 Query string parameters accepted:
 
-"**name**" required*  
-Specify the name of the Musician
-```
-type: 'string'
-minLength: 3
-maxLength: 32
-```
-"**age**"  
-Specify the age of the Musician
-```
-type: integer
-max: 150
-```
-"**active**" required*  
-Specifiy whether or not the Musician is still actively making music
-```
-type: boolean
-defaultValue: false
-```
+{ "musician":  
+&nbsp;&nbsp;{
+  "**name**" required*  
+  Specify the name of the Musician
+  ```
+  type: 'string'
+  minLength: 3
+  maxLength: 32
+  ```
+  "**age**"  
+  Specify the age of the Musician
+  ```
+  type: integer
+  max: 150
+  ```
+  "**active**" required*  
+  Specifiy whether or not the Musician is still actively making music
+  ```
+  type: boolean
+  defaultValue: false
+  ```
+&nbsp;&nbsp;}
+}
+
+Example query using a JSON body request: ```{ "musician":{ "name": "TonAsh", "age": 34, "active": true } }```
 
 **JSON data returned**:
 
@@ -59,6 +65,32 @@ defaultValue: false
 ## Patch /musicians
 
 Once the PATCH request has successfully gone through an array of all musicians currently in the database will be returned
+
+{ "musician":  
+&nbsp;&nbsp;{
+  "**name**" required*  
+  Specify the name of the Musician
+  ```
+  type: 'string'
+  minLength: 3
+  maxLength: 32
+  ```
+  "**age**"  
+  Specify the age of the Musician
+  ```
+  type: integer
+  max: 150
+  ```
+  "**active**" required*  
+  Specifiy whether or not the Musician is still actively making music
+  ```
+  type: boolean
+  defaultValue: false
+  ```
+&nbsp;&nbsp;}
+}
+
+Example query using a JSON body request: ```{ "musician":{ "name": "TonAsh", "age": 34, "active": true } }```
 
 **JSON data returned**:
 
