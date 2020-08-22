@@ -53,8 +53,8 @@ defaultValue: false
 
 **JSON data returned**:
 
-**200**: ```{ status: :created, musicians: Array of objects }```  
-**500**: ```{ status: 'ERROR', message: 'Artist could not be updated!', error: Array }```
+**200**: ```{ status: "created", musicians: Array of objects }```  
+**500**: ```{ status: "ERROR", message: "Artist could not be updated!", error: Array }```
 
 ## Patch /musicians
 
@@ -62,8 +62,8 @@ Once the PATCH request has successfully gone through an array of all musicians c
 
 **JSON data returned**:
 
-**200**: ```{ status: :created, musicians: Array of objects }```  
-**500**: ```{ status: 'ERROR', message: 'Artist could not be updated!', error: Array }```
+**200**: ```{ status: "created", musicians: Array of objects }```  
+**500**: ```{ status: "ERROR", message: "Artist could not be updated!", error: Array }```
 
 ## Routes
 <pre>
