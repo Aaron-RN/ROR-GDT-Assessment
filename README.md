@@ -23,7 +23,7 @@ Once the GET request has successfully gone through an array of all musicians cur
 
 **JSON data returned**:
 
-**200**: ```{ "status":"ok","musicians":[] }```
+**200**: ```{ "status":"ok", "musicians":[] }```
 
 ## POST /musicians
 
