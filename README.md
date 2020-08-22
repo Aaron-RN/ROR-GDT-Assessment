@@ -31,7 +31,7 @@ Once the POST request has successfully gone through an array of all musicians cu
 
 Query string parameters accepted:
 
-"**name**" required  
+"**name**" required*  
 Specify the name of the Musician
 ```
 type: 'string'
@@ -44,7 +44,7 @@ Specify the age of the Musician
 type: integer
 max: 150
 ```
-"**active**" required  
+"**active**" required*  
 Specifiy whether or not the Musician is still actively making music
 ```
 type: boolean
