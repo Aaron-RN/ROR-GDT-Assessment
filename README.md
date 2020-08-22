@@ -17,6 +17,54 @@ The data held in this back-end API is related to a musician table.
 Handles new musician creations  
 Parameters accepted: { musician: { :name, :age, :active} }
 
+## GET /musicians
+
+Once the GET request has successfully gone through an array of all musicians currently in the database will be returned
+
+JSON data returned:
+
+**200**: ```{ "status":"ok","musicians":[] }```
+
+## POST /musicians
+
+Once the POST request has successfully gone through an array of all musicians currently in the database will be returned
+
+Query string parameters accepted:
+
+"**name**" required  
+Specify the name of the Musician
+```
+type: 'string'
+minLength: 3
+maxLength: 32
+```
+"**age**"  
+Specify the age of the Musician
+```
+type: integer
+max: 150
+```
+"**active**" required  
+Specifiy whether or not the Musician is still actively making music
+```
+type: boolean
+defaultValue: false
+```
+
+JSON data returned:
+
+**200**: ```{ status: :created, musicians: Array of objects }```  
+**500**: ```{ status: 'ERROR', message: 'Artist could not be updated!', error: Array }```
+
+## Patch /musicians
+
+Once the PATCH request has successfully gone through an array of all musicians currently in the database will be returned
+
+JSON data returned:
+
+**200**: ```{ status: :created, musicians: Array of objects }```  
+**500**: ```{ status: 'ERROR', message: 'Artist could not be updated!', error: Array }```
+
 ## Routes
 <pre>
 Prefix Verb   URI Pattern                                                                       Controller#Action
