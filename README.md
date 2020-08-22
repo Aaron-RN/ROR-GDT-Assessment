@@ -62,7 +62,7 @@ Example query using a JSON body request: ```{ "musician":{ "name": "TonAsh", "ag
 **200**: ```{ status: "created", musicians: Array of objects }```  
 **500**: ```{ status: "ERROR", message: "Artist could not be updated!", error: Array }```
 
-## Patch /musicians
+## PATCH /musicians
 
 Once the PATCH request has successfully gone through an array of all musicians currently in the database will be returned
 
