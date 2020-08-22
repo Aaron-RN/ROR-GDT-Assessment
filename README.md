@@ -21,7 +21,7 @@ Parameters accepted: { musician: { :name, :age, :active} }
 
 Once the GET request has successfully gone through an array of all musicians currently in the database will be returned
 
-JSON data returned:
+**JSON data returned**:
 
 **200**: ```{ "status":"ok","musicians":[] }```
 
@@ -51,7 +51,7 @@ type: boolean
 defaultValue: false
 ```
 
-JSON data returned:
+**JSON data returned**:
 
 **200**: ```{ status: :created, musicians: Array of objects }```  
 **500**: ```{ status: 'ERROR', message: 'Artist could not be updated!', error: Array }```
@@ -60,7 +60,7 @@ JSON data returned:
 
 Once the PATCH request has successfully gone through an array of all musicians currently in the database will be returned
 
-JSON data returned:
+**JSON data returned**:
 
 **200**: ```{ status: :created, musicians: Array of objects }```  
 **500**: ```{ status: 'ERROR', message: 'Artist could not be updated!', error: Array }```
