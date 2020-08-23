@@ -8,9 +8,9 @@ The data held in this back-end API is related to a musician table.
 ### - LocalMusician
 - Has one (1) unique field: **:name**
 - Has two (2) non-unique fields: **:age, :active**
-- Has string validations required for **:name**
-- Has numeric validations required for **:age**
-- Has boolean validations required for **:active**
+- Has string validations required for **:name** { min: 3, max: 32 }, must have a value
+- Has numeric validations required for **:age** { greater_than_or_equal_to: 150 }, must be an integer
+- Has boolean validations required for **:active** , must be either :true or :false
 
 ## Controllers
 ### Musicians Controller
@@ -19,7 +19,7 @@ Parameters accepted: { musician: { :name, :age, :active} }
 
 ## GET /musicians
 
-Once the GET request has successfully gone through an array of all musicians currently in the database will be returned
+Once the GET request has successfully gone through, an array of all musicians currently in the database will be returned
 
 **JSON data returned**:
 
@@ -27,7 +27,7 @@ Once the GET request has successfully gone through an array of all musicians cur
 
 ## POST /musicians
 
-Once the POST request has successfully gone through an array of all musicians currently in the database will be returned
+Once the POST request has successfully gone through, an array of all musicians currently in the database will be returned
 
 Query string parameters accepted:
 
@@ -64,7 +64,7 @@ Example query using a JSON body request: ```{ "musician":{ "name": "TonAsh", "ag
 
 ## PATCH /musicians
 
-Once the PATCH request has successfully gone through an array of all musicians currently in the database will be returned
+Once the PATCH request has successfully gone through, an array of all musicians currently in the database will be returned
 
 { "musician":  
 &nbsp;&nbsp;{
