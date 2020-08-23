@@ -7,7 +7,7 @@ The data held in this back-end API is related to a musician table.
 ## Models
 ### - LocalMusician
 - Has one (1) unique field: **:name**
-- Has two (2) other fields: **:age, :active**
+- Has two (2) non-unique fields: **:age, :active**
 - Has string validations required for **:name**
 - Has numeric validations required for **:age**
 - Has boolean validations required for **:active**
